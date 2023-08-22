@@ -61,11 +61,36 @@ class ProductDetails : AppCompatActivity() {
             binding.txtPrice.text = decimalFormat.format(newPrice)
         }
 
-        binding.btnConfirm.setOnClickListener{
+        binding.btnConfirm.setOnClickListener {
             val mustard = binding.btnMustard
             val ketchup = binding.btnKetchup
             val lemonSoda = binding.btnLemonSoda
             val juice = binding.btnJuice
+
+            val saucesAndDrinks = when {
+                mustard.isChecked -> {
+                    "Mustard"
+                }
+                ketchup.isChecked -> {
+                    "Ketchup"
+                }
+                lemonSoda.isChecked -> {
+                    "Lemon Soda"
+                }
+                juice.isChecked -> {
+                    "Juice"
+                }
+                else -> {
+                    ""
+                }
+            }
+
+            val intent = Intent(this,Payment::class.java)
+            intent.putExtra("name", name)
+            intent.putExtra("amount", amount)
+            intent.putExtra("total", newPrice)
+            intent.putExtra("saucesAndDrinks", saucesAndDrinks)
+            startActivity(intent)
         }
     }
 }
