@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         window.statusBarColor = Color.parseColor("#E0E0E0")
+
         CoroutineScope(Dispatchers.IO).launch {
             produtcs.getProducts().collectIndexed { index, value ->
                 for (p: Product in value) {

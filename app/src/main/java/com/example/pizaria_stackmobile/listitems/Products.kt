@@ -16,32 +16,32 @@ class Products {
             Product(
                 imgProduct = R.drawable.cheese_pizza,
                 name = "Cheese Pizza",
-                price = "30,00"
+                price = "30.00"
             ),
             Product(
                 imgProduct = R.drawable.classic_pizza,
                 name = "Classic Pizza",
-                price = "20,00"
+                price = "20.00"
             ),
             Product(
                 imgProduct = R.drawable.salmon_pizza,
                 name = "Salmon Pizza",
-                price = "50,00"
+                price = "50.00"
             ),
             Product(
                 imgProduct = R.drawable.mixed_pizza,
                 name = "Mixed Pizza",
-                price = "40,00"
+                price = "40.00"
             ),
             Product(
                 imgProduct = R.drawable.cheese_pizza,
                 name = "Cheese Pizza",
-                price = "30,00"
+                price = "30.00"
             ),
             Product(
                 imgProduct = R.drawable.classic_pizza,
                 name = "Classic Pizza",
-                price = "20,00"
+                price = "20.00"
             ),
         )
         _productList.value = productList
