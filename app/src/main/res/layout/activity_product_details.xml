@@ -81,7 +81,7 @@
 
         <TextView
             android:id="@+id/txtPrice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="R$ 30.00"
             android:textColor="@color/red"

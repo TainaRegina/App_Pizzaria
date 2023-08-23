@@ -5,8 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/light_gray"
     tools:context=".Payment">
 
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Forma de Pagamento"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_margin="20dp"/>
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/container_radio_group"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/btnCreditCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cartão de Crédito"/>
+
+        <RadioButton
+            android:id="@+id/btnPix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pix"/>
+
+    </RadioGroup>
+    
+    <EditText
+        android:id="@+id/editPix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celular ou E-mail"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:layout_margin="20dp"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="28dp"/>
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_margin="20dp"/>
+    
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pague Agora"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="15dp"
+        app:cornerRadius="15dp"
+        android:layout_margin="20dp"/>
 
 </LinearLayout>
